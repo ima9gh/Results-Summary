@@ -1,0 +1,251 @@
+/* CSS Document */
+@font-face {
+	font-family: HankenGrotesk;
+	src: url(assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+@font-face{
+	font-family: HankenGrotesk-ExtraBold;
+	src: url(assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+@font-face{
+	font-family: HankenGrotesk-Bold;
+	src: url(assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+
+:root{
+	--clrLightRed: hsl(0, 100%, 67%);
+    --clrOrangeyYellow: hsl(39, 100%, 56%);
+    --clrGreenTeal: hsl(166, 100%, 37%);
+    --clrCobaltBlue: hsl(234, 85%, 45%);
+    --BGclr: hsl(252, 100%, 67%);
+    --BGclrr: hsl(241, 81%, 54%);
+    --BGcirclee: hsla(256, 72%, 46%, 1);
+    --BGcircle: hsla(241, 72%, 46%, 0);
+    --clrWhite: hsl(0, 0%, 100%);
+    --clrPaleBlue: hsl(221, 100%, 96%);
+    --clrLightlavender: hsl(241, 100%, 89%);
+    --clrDarkGrayBlue: hsl(224, 30%, 27%);
+}
+
+body{
+	font-family: HankenGrotesk;
+	background-color: var(--clrWhite);
+	font-size: 18px;
+	height: 1080px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+.container{
+	height: 512px;
+	width: 737px;
+	display: flex;
+	flex-direction: row;
+	border-radius: 30px;
+	box-shadow: 0px 20px 40px 14px var(--clrPaleBlue);
+}
+
+.left{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	width: 368.5px;
+	color: var(--clrLightlavender);
+	border-radius: 30px 30px 30px 30px;
+	background: linear-gradient(to bottom,var(--BGclr),var(--BGclrr));
+}
+
+.left h2{
+	margin: 40px 0 35px 0;
+	font-size: 1.3em;
+}
+
+.circle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 55%;
+	height: 39%;
+	border-radius: 100%;
+	background: linear-gradient(to bottom,var(--BGcirclee),var(--BGcircle));
+}
+
+.circle h1,.texts h2{
+	color: var(--clrWhite);
+}
+
+.texts{
+    text-align: center;
+}
+
+.texts h2{
+	font-size: 1.7em;
+	margin: 25px 0 5px 0;
+}
+
+.texts p{
+	word-break: normal;
+	width: 248px;
+}
+
+.circle h1{
+	font-size: 3.9em;
+	font-family: HankenGrotesk-ExtraBold;
+	margin: 0;
+} 
+
+.circle span{
+	color: hsl(246, 100%, 74%);
+}
+
+.right{
+	width: 368.5px;
+	box-sizing: border-box;
+	padding: 40px;
+}
+
+.right h2{
+	margin: 0 0 27px 0;
+	font-size: 1.3em;
+	color: var(--clrDarkGrayBlue);
+}
+
+.reaction,.memory,.verbal,.visual{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 17px;
+	border-radius: 10px;
+	width: 100%;
+	height: 3.5rem;
+	box-sizing: border-box;
+	padding: 0 17px 0 17px;
+}
+
+.reaction{
+	color: var(--clrLightRed);
+	background-color: hsl(6, 100%, 98%);
+}
+
+.memory{
+	color: var(--clrOrangeyYellow);
+	background-color: hsl(42, 100%, 97%);
+}
+
+.verbal{
+	color: var(--clrGreenTeal);
+	background-color: hsl(173, 53%, 97%);
+}
+
+.visual{
+	color: var(--clrCobaltBlue);
+	background-color: hsl(240, 71%, 97%);
+	margin-bottom: 40px;
+}
+
+.txt img{
+	position: relative;
+	top: 4px;
+}
+
+.score{
+	color: hsl(0, 0%, 60%);
+	font-family: HankenGrotesk-Bold;
+}
+
+.score span{
+	color: var(--clrDarkGrayBlue);
+
+}
+
+button{
+	background-color: var(--clrDarkGrayBlue);
+	width: 100%;
+	height: 55px;
+	border-radius: 30px;
+	color: var(--clrWhite);
+	font-size: 1em;
+	border: none;
+}
+
+button:hover{
+	background: linear-gradient(to bottom,var(--BGclr),var(--BGclrr));
+	cursor: pointer;
+}
+
+@media screen and (max-width:465px){
+	body{
+		margin: 0;
+	}
+	.container{
+		height: 730px;
+		width: 323px;
+		flex-direction: column;
+		border-radius: 0;
+	}
+
+	.left{
+		width: 323px;
+		height: 323px;
+		border-radius: 0 0 30px 30px;
+	}
+
+	.right{
+		width: 323px;
+		padding: 20px;
+	}
+
+	.left h2{
+		margin: 25px 0 25px 0;
+		font-size: .9em;
+	}
+	
+	.circle{
+		width: 40%;
+		height: 200px;
+	}
+
+	.circle span{
+		font-size: .7em;
+	}
+
+	.texts h2{
+		font-size: 1.2em;
+		margin: 15px 0 5px 0;
+	}
+	
+	.texts p{
+		width: 250px;
+		font-size: .8em;
+		margin-bottom: 30px;
+	}
+	
+	.circle h1{
+		font-size: 2.3em;
+	} 
+
+	.right h2{
+		margin: 0 0 25px 0;
+		font-size: 1em;
+	}
+
+	.reaction,.memory,.verbal,.visual{
+		margin-bottom: 17px;
+		height: 3rem;
+	}
+
+	.visual{
+		margin-bottom: 23px;
+	}
+
+	button{
+		height: 45px;
+		font-size: .8em;
+	}
+}
